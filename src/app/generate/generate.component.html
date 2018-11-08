@@ -1,0 +1,23 @@
+<div>
+  <form class="mt-5 mb-5" style="text-align: center;" >
+    <div class="form-group">
+      <!-- <label for="privateKey">Import Private Key</label> -->
+      <input id="privateKey"  value={{private1}} style="text-align: center;" readonly >
+      <br><br>
+      <input id="publicKey"   value={{public1}} style="text-align: center;" readonly >
+      <br><br>
+      <input  id="mnemonic"  value={{mnemonic}} style="text-align: center;" readonly>
+      <br><br>
+      <input  [(ngModel)]="name" [ngModelOptions]="{standalone: true}" type="text" id="accname" class="form-control" placeholder="Enter account name"  style="text-align: center;" >
+      </div>
+   
+    <br>  <br>
+    <button type="button" class="btn btn-primary" style="width: 20%;" (click)="copy()">Copy to clipboard</button>
+   
+    <br>  <br>
+    <button type="submit" class="btn btn-primary" style="width: 20%;" (click)=" key_gen()">Create</button>
+   
+  
+    
+  </form>
+</div>
